@@ -35,12 +35,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Structured data (JSON-LD).
-     geo en sameAs zijn ingevuld vanuit het Google Bedrijfsprofiel (sep 2026).
-     Nog aan te vullen zodra de echte openingsuren gekend zijn:
-     "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification",
-       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-       "opens": "08:00", "closes": "18:00" }],
-     Niet ingevuld met verzonnen waarden.-->
+     geo, sameAs en openingHoursSpecification zijn ingevuld vanuit het
+     Google Bedrijfsprofiel en de praktijk zelf (sep 2026).
+     Optioneel nog toe te voegen: "priceRange" (Google vraagt erom, niet verplicht).-->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,6 +83,14 @@
       "availableLanguage": [
         { "@type": "Language", "name": "Nederlands", "alternateName": "nl-BE" },
         { "@type": "Language", "name": "Frans", "alternateName": "fr-BE" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
       ],
       "amenityFeature": {
         "@type": "LocationFeatureSpecification",
