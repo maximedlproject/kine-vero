@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <style>
+    body { margin: 0; }
+    a { color: {{ accentDark }}; text-decoration: none; }
+    a:hover { color: {{ accentColor }}; }
+    ::selection { background: {{ accentSoft }}; }
+  </style>
+</helmet>
+
+<div style="font-family: 'Work Sans', sans-serif; background: oklch(97% 0.012 70); color: oklch(24% 0.015 50); line-height: 1.6; overflow-x: hidden;">
+
+  <!-- NAV -->
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px 4vw; background: oklch(97% 0.012 70 / 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid oklch(88% 0.02 60);">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; width: 100%; max-width: 720px; position: relative;">
+      <a href="#top" style="font-family: 'Newsreader', serif; font-size: {{ navBrandFontSize }}; font-weight: 500; color: {{ accentDark }}; letter-spacing: 0.2px; white-space: nowrap;">Véronique Foulon</a>
+      <button onClick="{{ onToggleMenu }}" aria-label="Menu" style="position: absolute; right: 0; display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0;">
+        <span style="display: block; width: 100%; height: 2px; background: {{ accentDark }};"></span>
+        <span style="display: block; width: 100%; height: 2px; background: {{ accentDark }};"></span>
+        <span style="display: block; width: 100%; height: 2px; background: {{ accentDark }};"></span>
+      </button>
+    </div>
+    <div style="display: {{ navLinksRowDisplay }}; align-items: center; gap: clamp(6px, 2vw, 16px); flex-wrap: nowrap; justify-content: center; width: 100%; max-width: 720px;">
+      <a href="#specialisaties" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentDark }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Specialisaties</b></a>
+      <a href="#over-mij" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentDark }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Over mij</b></a>
+      <a href="#contact" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentDark }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Contact</b></a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="top" style="padding: {{ heroPadding }}; max-width: 900px; margin: 0 auto; text-align: center;">
+    <p style="font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: {{ accentColor }}; margin: 0 0 18px;">Kinesitherapie · Kortrijk</p>
+    <h1 style="font-family: 'Newsreader', serif; font-size: clamp(36px, 4.2vw, 56px); font-weight: 500; line-height: 1.15; margin: 0 auto 24px; color: oklch(22% 0.02 45);">Ruimte voor herstel, met aandacht voor het hele lichaam.</h1>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+      <a href="tel:0478516265" style="flex: 1 1 0; min-width: 180px; max-width: 210px; padding: 12px 20px; border: 3px solid {{ accentColor }}; background: {{ accentColor }}; color: oklch(98% 0.01 70); border-radius: 3px; font-size: 15px; font-weight: 500; text-align: center; line-height: 1.4;">Bel voor een afspraak<br><span style="font-size: 13px; font-weight: 400; opacity: 0.85;">0478 51 62 65</span></a>
+      <a href="https://wa.me/32478516265?text=Hallo%2C%20ik%20ben%20X%20en%20zou%20graag%20een%20afspraak%20maken%20omwille%20van%20X.%0AGroeten%2C%0AX." target="_blank" style="flex: 1 1 0; min-width: 180px; max-width: 210px; display: flex; align-items: center; justify-content: center; padding: 12px 20px; border: 3px solid {{ accentColor }}; color: {{ accentDark }}; border-radius: 3px; font-size: 15px; font-weight: 500;">Contacteer via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- VISIE -->
+  <section style="background: oklch(93% 0.02 55); padding: 90px 6vw;">
+    <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.5; color: {{ accentDark }}; margin: 0;">"Lichamelijke klachten staan zelden op zichzelf. Door aandacht te geven aan wat het lichaam vasthoudt, ontstaat er ruimte om te herstellen."</p>
+    </div>
+  </section>
+
+  <!-- SPECIALISATIES -->
+  <section id="specialisaties" style="padding: {{ sectionPadding }}; max-width: 1200px; margin: 0 auto;">
+    <div style="max-width: 640px; margin: 0 0 60px;">
+      <p style="font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: {{ accentColor }}; margin: 0 0 14px;">Specialisaties</p>
+      <h2 style="font-family: 'Newsreader', serif; font-size: clamp(28px, 3vw, 38px); font-weight: 500; margin: 0; color: oklch(22% 0.02 45);">Behandelingen op maat, van klassieke revalidatie tot zachte lichaamsgerichte therapie.</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: {{ specGridCols }}; gap: 28px;">
+      <div style="background: oklch(93% 0.02 55); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Algemene orthopedie</h3>
+        <p style="color: oklch(40% 0.02 50); font-size: 15px; margin: 0 0 14px;">Het herstel van aandoeningen van het bewegingsapparaat onder andere voor:</p>
+        <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 50); font-size: 16px;">
+          <li style="margin-bottom: 10px;">Knie- en heupprothese</li>
+          <li style="margin-bottom: 10px;">Tendinitis</li>
+          <li style="margin-bottom: 10px;">Distorsie (verstuiking) van de enkel</li>
+          <li>Post-operatieve revalidatie</li>
+        </ul>
+      </div>
+      <div style="background: oklch(93% 0.02 55); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Cranio-Sacraal therapie</h3>
+        <p style="color: oklch(40% 0.02 50); font-size: 16px; margin: 0 0 14px;">Via subtiele aanrakingen wordt het cranio-sacrale systeem (het gebied van de schedel tot het heiligbeen) onderzocht en behandeld. Deze rustgevende therapie:</p>
+        <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 50); font-size: 16px;">
+          <li style="margin-bottom: 10px;">Heft blokkades op</li>
+          <li>Stimuleert het regeneratief vermogen van het lichaam</li>
+        </ul>
+      </div>
+      <div style="position: relative; background: oklch(93% 0.02 55); border-radius: 6px; padding: 40px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; position: relative;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0; color: {{ accentDark }};">Fasciatherapie</h3>
+          <span onMouseEnter="{{ onFasciaInfoEnter }}" onMouseLeave="{{ onFasciaInfoLeave }}" style="cursor: default; flex-shrink: 0;">
+            <span style="font-size: 13px; color: {{ accentColor }}; border: 1.5px solid {{ accentColor }}; border-radius: 999px; padding: 6px 14px; white-space: nowrap;">Meer info</span>
+          </span>
+          <div style="display: {{ fasciaTooltipDisplay }}; position: absolute; top: 34px; right: 0; z-index: 10; width: 260px; background: oklch(24% 0.015 50); color: oklch(96% 0.01 60); font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; padding: 14px 16px; border-radius: 6px; box-shadow: 0 8px 24px oklch(0% 0 0 / 0.2);">Zachte manuele therapie die inwerkt op het bindweefsel (fascia) om spanningen los te maken en de doorbloeding te verbeteren.</div>
+        </div>
+        <p style="color: oklch(40% 0.02 50); font-size: 16px; margin: 0 0 14px;">Een zachte, diepgaande behandelmethode die ondersteuning biedt bij onder andere:</p>
+        <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 50); font-size: 16px;">
+          <li style="margin-bottom: 10px;">Stress, vermoeidheid, fibromyalgie en hyperventilatie</li>
+          <li style="margin-bottom: 10px;">Nek-, rug- en hoofdpijn en whiplash</li>
+          <li style="margin-bottom: 10px;">Verteringsstoornissen</li>
+          <li>Psychosomatische of vage klachten</li>
+        </ul>
+      </div>
+      <div style="background: oklch(93% 0.02 55); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Neurologie</h3>
+        <p style="color: oklch(40% 0.02 50); font-size: 15px; margin: 0 0 14px;">Revalidatie en begeleiding bij aandoeningen van het zenuwstelsel. Dit omvat onder andere:</p>
+        <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 50); font-size: 16px;">
+          <li style="margin-bottom: 10px;">Ziekte van Parkinson</li>
+          <li style="margin-bottom: 10px;">Hemiplegie (halfzijdige verlamming)</li>
+          <li>Brachialisparalyse</li>
+        </ul>
+      </div>
+      <div style="background: oklch(93% 0.02 55); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Relaxatietherapie</h3>
+        <p style="color: oklch(40% 0.02 50); font-size: 16px; margin: 0 0 20px;">Gerichte begeleiding naar fysieke en mentale rust via:</p>
+        <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 50); font-size: 16px;">
+          <li style="margin-bottom: 10px;">Ademhalingsoefeningen</li>
+          <li style="margin-bottom: 10px;">Lichaamsbewustwording</li>
+          <li>Ontspanningstechnieken</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVER MIJ -->
+  <section id="over-mij" style="background: oklch(93% 0.02 55); padding: {{ sectionPadding }};">
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: {{ overMijCols }}; gap: 50px; align-items: center;">
+      <sc-if value="{{ showPhoto }}" hint-placeholder-val="{{ true }}">
+        <image-slot id="profiel-foto" src="./assets/veronique-profielfoto.jpg" style="width: {{ photoColumnWidth }}; height: {{ photoColumnWidth }}; order: {{ overMijPhotoOrder }}; justify-self: center;" shape="circle" placeholder="Foto van Véronique"></image-slot>
+      </sc-if>
+      <div style="order: {{ overMijTextOrder }};">
+        <p style="font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: {{ accentColor }}; margin: 0 0 14px;">Over mij</p>
+        <h2 style="font-family: 'Newsreader', serif; font-size: clamp(26px, 2.8vw, 34px); font-weight: 500; margin: 0 0 22px; color: oklch(22% 0.02 45);">Véronique Foulon</h2>
+        <p style="color: oklch(40% 0.02 50); font-size: 17px; margin: 0 0 16px; max-width: 620px;">Als kinesitherapeut behandel ik met aandacht voor de mens achter de klacht. Naast klassieke kinesitherapie werk ik graag met zachtere, lichaamsgerichte technieken zoals fasciatherapie en cranio-sacraal therapie - omdat lichaam en geest nauw met elkaar verweven zijn.</p>
+        <p style="color: oklch(40% 0.02 50); font-size: 17px; margin: 0; max-width: 620px;">De praktijk is Nederlandstalig en Franstalig.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAKTISCH & CONTACT -->
+  <section id="contact" style="background: {{ accentDark }}; padding: {{ sectionPadding }}; color: oklch(96% 0.01 60);">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: {{ contactGridCols }}; gap: 60px; align-items: start;">
+      <div>
+        <p style="font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: {{ accentSoft }}; margin: 0 0 14px;">Contact</p>
+                <div style="display: flex; flex-direction: column; gap: 16px; font-size: 17px;">
+          <p style="margin: 0;">Kanunnik Maesstraat 1<br>8500 Kortrijk</p>
+          <p style="margin: 0; display: flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="tel:0478516265" style="color: oklch(96% 0.01 60);">0478 51 62 65</a>
+          </p>
+        </div>
+        <a href="https://wa.me/32478516265" style="display: inline-block; margin-top: 30px; padding: 15px 28px; background: {{ accentColor }}; color: oklch(98% 0.01 70); border-radius: 3px; font-size: 15px; font-weight: 500;">Stuur een WhatsApp-bericht</a>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; padding-top: 30px; border-top: 1px solid oklch(40% 0.02 45);">
+          <div>
+            <h4 style="font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase; color: {{ accentSoft }}; margin: 0 0 10px;">Openingsuren</h4>
+            <p style="margin: 0; font-size: 15px;">Maandag tot vrijdag, op afspraak.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase; color: {{ accentSoft }}; margin: 0 0 10px;">Taal</h4>
+            <p style="margin: 0; font-size: 15px;">Nederlandstalig en Franstalig.</p>
+          </div>
+          <div>
+            <h4 style="font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase; color: {{ accentSoft }}; margin: 0 0 10px;">Bereikbaarheid</h4>
+            <p style="margin: 0; font-size: 15px;">Parking is aanwezig.</p>
+          </div>
+        </div>
+      </div>
+      <sc-if value="{{ showMap }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <div style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px oklch(0% 0 0 / 0.28); border: 1px solid oklch(50% 0.02 45);">
+            <iframe title="Locatie" style="width: 100%; height: 340px; border: 0; display: block; filter: saturate(0.85) contrast(1.02);" loading="lazy" src="https://maps.google.com/maps?q=Kanunnik+Maesstraat+1+8500+Kortrijk&amp;output=embed"></iframe>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Kanunnik+Maesstraat+1+8500+Kortrijk" target="_blank" style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; background: {{ accentColor }}; color: oklch(98% 0.01 70); font-size: 15px; font-weight: 500; padding: 14px 20px; border-radius: 3px; text-decoration: none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Open in Google Maps
+          </a>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding: 36px 6vw; background: oklch(97% 0.012 70); border-top: 1px solid oklch(88% 0.02 60); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <p style="margin: 0; font-size: 14px; color: oklch(50% 0.02 50);">© 2026 Véronique Foulon — Kinesitherapie</p>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}, &quot;accentColor&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#a15c3f&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#a15c3f&quot;, &quot;#8c4a30&quot;, &quot;#b56a45&quot;, &quot;#9c5a3c&quot;]}, &quot;accentDark&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#6b3a28&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#6b3a28&quot;, &quot;#5a3020&quot;, &quot;#4a2818&quot;]}, &quot;showPhoto&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Over mij&quot;}, &quot;showMap&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { isMobile: typeof window !== 'undefined' && window.innerWidth <= 760, fasciaInfoOpen: false, menuOpen: false };
+
+  componentDidMount() {
+    this._onResize = () => {
+      const m = window.innerWidth <= 760;
+      if (m !== this.state.isMobile) this.setState({ isMobile: m });
+    };
+    window.addEventListener('resize', this._onResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+  }
+
+  renderVals() {
+    const accent = this.props.accentColor ?? '#a15c3f';
+    const m = this.state.isMobile;
+    return {
+      accentColor: accent,
+      accentDark: this.props.accentDark ?? '#6b3a28',
+      accentSoft: 'oklch(85% 0.05 45)',
+      showPhoto: this.props.showPhoto ?? true,
+      showMap: this.props.showMap ?? true,
+      photoColumnWidth: (this.props.showPhoto ?? true) ? (m ? '90px' : '150px') : '0px',
+      isMobile: m,
+      navLinksDisplay: 'flex',
+      navGap: m ? '8px' : '16px',
+      navLinkFontSize: m ? '15px' : '18px',
+      navLinkPadding: m ? '8px 12px' : '10px 20px',
+      navBrandFontSize: m ? '24px' : '30px',
+      heroPadding: m ? '40px 6vw 70px' : '50px 6vw 120px',
+      sectionPadding: m ? '60px 6vw' : '100px 6vw',
+      specGridCols: m ? '1fr' : 'minmax(0,1fr) minmax(0,1fr)',
+      praktischGridCols: m ? '1fr 1fr' : 'repeat(4, 1fr)',
+      contactGridCols: m ? '1fr' : 'minmax(0,1fr) minmax(0,1fr)',
+      overMijCols: m ? '1fr' : ((this.props.showPhoto ?? true) ? '150px 1fr' : '1fr'),
+      overMijPhotoOrder: m ? 2 : 1,
+      overMijTextOrder: m ? 1 : 2,
+      fasciaTooltipDisplay: this.state.fasciaInfoOpen ? 'block' : 'none',
+      onFasciaInfoEnter: () => this.setState({ fasciaInfoOpen: true }),
+      onFasciaInfoLeave: () => this.setState({ fasciaInfoOpen: false }),
+      menuOpen: this.state.menuOpen,
+      onToggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      navLinksRowDisplay: this.state.menuOpen ? 'flex' : 'none',
+    };
+  }
+}
+</script>
+</body>
+</html>
