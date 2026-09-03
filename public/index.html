@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://kine-vero.be/">
 <meta name="author" content="Véronique Foulon">
-<meta name="theme-color" content="#f1f7f0">
+<meta name="theme-color" content="#eaf1e8">
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
@@ -148,18 +148,18 @@
   <script src="./image-slot.js"></script>
   <style>
     body { margin: 0; }
-    a { color: {{ accentDark }}; text-decoration: none; }
+    a { color: {{ accentText }}; text-decoration: none; }
     a:hover { color: {{ accentColor }}; }
     ::selection { background: {{ accentSoft }}; }
   </style>
 </helmet>
 
-<div style="font-family: 'Work Sans', sans-serif; background: oklch(97% 0.012 140); color: oklch(24% 0.015 140); line-height: 1.6; overflow-x: hidden;">
+<div style="font-family: 'Work Sans', sans-serif; background: oklch(95% 0.014 140); color: oklch(24% 0.015 140); line-height: 1.6; overflow-x: hidden;">
 
   <!-- NAV -->
-  <nav style="position: sticky; top: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px 4vw; background: oklch(97% 0.012 140 / 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid oklch(88% 0.02 140);">
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px 4vw; background: oklch(95% 0.014 140 / 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid oklch(84% 0.02 140);">
     <div style="display: flex; align-items: center; justify-content: center; gap: 14px; width: 100%; max-width: 720px; position: relative;">
-      <a href="#top" style="font-family: 'Newsreader', serif; font-size: {{ navBrandFontSize }}; font-weight: 500; color: {{ accentDark }}; letter-spacing: 0.2px; white-space: nowrap;">Véronique Foulon</a>
+      <a href="#top" style="font-family: 'Newsreader', serif; font-size: {{ navBrandFontSize }}; font-weight: 500; color: {{ accentText }}; letter-spacing: 0.2px; white-space: nowrap;">Véronique Foulon</a>
       <button onClick="{{ onToggleMenu }}" aria-label="Menu" style="position: absolute; right: 0; display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0;">
         <span style="display: block; width: 100%; height: 2px; background: {{ accentDark }};"></span>
         <span style="display: block; width: 100%; height: 2px; background: {{ accentDark }};"></span>
@@ -167,9 +167,9 @@
       </button>
     </div>
     <div style="display: {{ navLinksRowDisplay }}; align-items: center; gap: clamp(6px, 2vw, 16px); flex-wrap: nowrap; justify-content: center; width: 100%; max-width: 720px;">
-      <a href="#specialisaties" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentDark }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Specialisaties</b></a>
-      <a href="#over-mij" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentDark }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Over mij</b></a>
-      <a href="#contact" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentDark }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Contact</b></a>
+      <a href="#specialisaties" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentText }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Specialisaties</b></a>
+      <a href="#over-mij" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentText }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Over mij</b></a>
+      <a href="#contact" style="flex: 1 1 0; min-width: 0; text-align: center; font-size: clamp(9px, 2.6vw, 16px); color: {{ accentText }}; border: 1.5px solid {{ accentColor }}; border-radius: 3px; padding: clamp(4px, 1.2vw, 8px) clamp(3px, 1vw, 12px); white-space: nowrap;"><b style="font-size: clamp(14px, 3.2vw, 18px)">Contact</b></a>
     </div>
   </nav>
 
@@ -184,9 +184,9 @@
   </section>
 
   <!-- VISIE -->
-  <section style="background: oklch(93% 0.02 140); padding: 90px 6vw;">
+  <section style="background: oklch(91% 0.02 140); padding: 90px 6vw;">
     <div style="max-width: 760px; margin: 0 auto; text-align: center;">
-      <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.5; color: {{ accentDark }}; margin: 0;">"Lichamelijke klachten staan zelden op zichzelf. Door aandacht te geven aan wat het lichaam vasthoudt, ontstaat er ruimte om te herstellen."</p>
+      <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.5; color: {{ accentText }}; margin: 0;">"Lichamelijke klachten staan zelden op zichzelf. Door aandacht te geven aan wat het lichaam vasthoudt, ontstaat er ruimte om te herstellen."</p>
     </div>
   </section>
 
@@ -198,8 +198,8 @@
     </div>
 
     <div style="display: grid; grid-template-columns: {{ specGridCols }}; gap: 28px;">
-      <div style="background: oklch(93% 0.02 140); border-radius: 6px; padding: 40px;">
-        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Algemene orthopedie</h3>
+      <div style="background: oklch(91% 0.02 140); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentText }};">Algemene orthopedie</h3>
         <p style="color: oklch(40% 0.02 140); font-size: 15px; margin: 0 0 14px;">Het herstel van aandoeningen van het bewegingsapparaat onder andere voor:</p>
         <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 140); font-size: 16px;">
           <li style="margin-bottom: 10px;">Knie- en heupprothese</li>
@@ -208,21 +208,21 @@
           <li>Post-operatieve revalidatie</li>
         </ul>
       </div>
-      <div style="background: oklch(93% 0.02 140); border-radius: 6px; padding: 40px;">
-        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Cranio-Sacraal therapie</h3>
+      <div style="background: oklch(91% 0.02 140); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentText }};">Cranio-Sacraal therapie</h3>
         <p style="color: oklch(40% 0.02 140); font-size: 16px; margin: 0 0 14px;">Via subtiele aanrakingen wordt het cranio-sacrale systeem (het gebied van de schedel tot het heiligbeen) onderzocht en behandeld. Deze rustgevende therapie:</p>
         <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 140); font-size: 16px;">
           <li style="margin-bottom: 10px;">Heft blokkades op</li>
           <li>Stimuleert het regeneratief vermogen van het lichaam</li>
         </ul>
       </div>
-      <div style="position: relative; background: oklch(93% 0.02 140); border-radius: 6px; padding: 40px;">
+      <div style="position: relative; background: oklch(91% 0.02 140); border-radius: 6px; padding: 40px;">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; position: relative;">
-          <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0; color: {{ accentDark }};">Fasciatherapie</h3>
+          <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0; color: {{ accentText }};">Fasciatherapie</h3>
           <span onMouseEnter="{{ onFasciaInfoEnter }}" onMouseLeave="{{ onFasciaInfoLeave }}" style="cursor: default; flex-shrink: 0;">
             <span style="font-size: 13px; color: {{ accentColor }}; border: 1.5px solid {{ accentColor }}; border-radius: 999px; padding: 6px 14px; white-space: nowrap;">Meer info</span>
           </span>
-          <div style="display: {{ fasciaTooltipDisplay }}; position: absolute; top: 34px; right: 0; z-index: 10; width: 260px; background: oklch(24% 0.015 140); color: oklch(96% 0.01 140); font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; padding: 14px 16px; border-radius: 6px; box-shadow: 0 8px 24px oklch(0% 0 0 / 0.2);">Zachte manuele therapie die inwerkt op het bindweefsel (fascia) om spanningen los te maken en de doorbloeding te verbeteren.</div>
+          <div style="display: {{ fasciaTooltipDisplay }}; position: absolute; top: 34px; right: 0; z-index: 10; width: 260px; background: oklch(24% 0.015 140); color: oklch(96% 0.01 140); font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; padding: 14px 16px; border-radius: 6px; box-shadow: 0 8px 24px oklch(25% 0.04 140 / 0.22);">Zachte manuele therapie die inwerkt op het bindweefsel (fascia) om spanningen los te maken en de doorbloeding te verbeteren.</div>
         </div>
         <p style="color: oklch(40% 0.02 140); font-size: 16px; margin: 0 0 14px;">Een zachte, diepgaande behandelmethode die ondersteuning biedt bij onder andere:</p>
         <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 140); font-size: 16px;">
@@ -232,8 +232,8 @@
           <li>Psychosomatische of vage klachten</li>
         </ul>
       </div>
-      <div style="background: oklch(93% 0.02 140); border-radius: 6px; padding: 40px;">
-        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Neurologie</h3>
+      <div style="background: oklch(91% 0.02 140); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentText }};">Neurologie</h3>
         <p style="color: oklch(40% 0.02 140); font-size: 15px; margin: 0 0 14px;">Revalidatie en begeleiding bij aandoeningen van het zenuwstelsel. Dit omvat onder andere:</p>
         <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 140); font-size: 16px;">
           <li style="margin-bottom: 10px;">Ziekte van Parkinson</li>
@@ -241,8 +241,8 @@
           <li>Brachialisparalyse</li>
         </ul>
       </div>
-      <div style="background: oklch(93% 0.02 140); border-radius: 6px; padding: 40px;">
-        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentDark }};">Relaxatietherapie</h3>
+      <div style="background: oklch(91% 0.02 140); border-radius: 6px; padding: 40px;">
+        <h3 style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500; margin: 0 0 20px; color: {{ accentText }};">Relaxatietherapie</h3>
         <p style="color: oklch(40% 0.02 140); font-size: 16px; margin: 0 0 20px;">Gerichte begeleiding naar fysieke en mentale rust via:</p>
         <ul style="margin: 0; padding: 0 0 0 18px; color: oklch(40% 0.02 140); font-size: 16px;">
           <li style="margin-bottom: 10px;">Ademhalingsoefeningen</li>
@@ -254,7 +254,7 @@
   </section>
 
   <!-- OVER MIJ -->
-  <section id="over-mij" style="background: oklch(93% 0.02 140); padding: {{ sectionPadding }};">
+  <section id="over-mij" style="background: oklch(91% 0.02 140); padding: {{ sectionPadding }};">
     <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: {{ overMijCols }}; gap: 50px; align-items: center;">
       <sc-if value="{{ showPhoto }}" hint-placeholder-val="{{ true }}">
         <image-slot id="profiel-foto" src="./assets/veronique-profielfoto-450.webp" style="width: {{ photoColumnWidth }}; height: {{ photoColumnWidth }}; order: {{ overMijPhotoOrder }}; justify-self: center;" shape="circle" placeholder="Foto van Véronique"></image-slot>
@@ -298,7 +298,7 @@
       </div>
       <sc-if value="{{ showMap }}" hint-placeholder-val="{{ true }}">
         <div>
-          <div style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px oklch(0% 0 0 / 0.28); border: 1px solid oklch(50% 0.02 140);">
+          <div style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px oklch(25% 0.04 140 / 0.28); border: 1px solid oklch(50% 0.02 140);">
             <iframe title="Locatie" style="width: 100%; height: 340px; border: 0; display: block; filter: saturate(0.85) contrast(1.02);" loading="lazy" src="https://maps.google.com/maps?q=Kanunnik+Maesstraat+1+8500+Kortrijk&amp;output=embed"></iframe>
           </div>
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Kanunnik+Maesstraat+1+8500+Kortrijk" target="_blank" rel="noopener" style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; background: {{ accentColor }}; color: oklch(98% 0.01 140); font-size: 15px; font-weight: 500; padding: 14px 20px; border-radius: 3px; text-decoration: none;">
@@ -311,7 +311,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer style="padding: 36px 6vw; background: oklch(97% 0.012 140); border-top: 1px solid oklch(88% 0.02 140); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+  <footer style="padding: 36px 6vw; background: oklch(95% 0.014 140); border-top: 1px solid oklch(84% 0.02 140); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
     <p style="margin: 0; font-size: 14px; color: oklch(50% 0.02 140);">© 2026 Véronique Foulon - Kinesitherapie</p>
   </footer>
 
@@ -340,6 +340,7 @@ class Component extends DCLogic {
     return {
       accentColor: accent,
       accentDark: this.props.accentDark ?? '#162710',
+      accentText: '#2b5322',
       accentSoft: 'oklch(85% 0.05 140)',
       showPhoto: this.props.showPhoto ?? true,
       showMap: this.props.showMap ?? true,
