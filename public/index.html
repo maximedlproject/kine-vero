@@ -159,7 +159,7 @@
   <!-- NAV -->
   <nav style="position: sticky; top: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px 4vw; background: oklch(95% 0.014 140 / 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid oklch(84% 0.02 140);">
     <div style="display: flex; align-items: center; justify-content: center; gap: 14px; width: 100%; max-width: 720px; position: relative;">
-      <a href="#top" style="font-family: 'Newsreader', serif; font-size: {{ navBrandFontSize }}; font-weight: 500; color: {{ accentText }}; letter-spacing: 0.2px; white-space: nowrap;">Véronique Foulon</a>
+      <a href="#top" style="font-family: 'Newsreader', serif; font-size: {{ navBrandFontSize }}; font-weight: 500; color: {{ accentDark }}; letter-spacing: 0.2px; white-space: nowrap;">Véronique Foulon</a>
       <button onClick="{{ onToggleMenu }}" aria-label="Menu" style="position: absolute; right: 0; display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0;">
         <span style="display: block; width: 100%; height: 2px; background: {{ accentDark }};"></span>
         <span style="display: block; width: 100%; height: 2px; background: {{ accentDark }};"></span>
@@ -280,7 +280,7 @@
             <a href="tel:+32478516265" style="color: oklch(96% 0.01 140);">0478 51 62 65</a>
           </p>
         </div>
-        <a href="https://wa.me/32478516265?text=Hallo%2C%20ik%20ben%20X%20en%20zou%20graag%20een%20afspraak%20maken%20omwille%20van%20X.%0AGroeten%2C%0AX" target="_blank" rel="noopener" style="display: inline-block; margin-top: 30px; padding: 15px 28px; background: {{ accentColor }}; color: oklch(98% 0.01 140); border-radius: 3px; font-size: 15px; font-weight: 500;">Stuur een WhatsApp-bericht</a>
+        <a href="https://wa.me/32478516265?text=Hallo%2C%20ik%20ben%20X%20en%20zou%20graag%20een%20afspraak%20maken%20omwille%20van%20X.%0AGroeten%2C%0AX" target="_blank" rel="noopener" style="display: inline-block; margin-top: 30px; padding: 15px 28px; background: {{ accentSoft }}; color: {{ accentDark }}; border-radius: 3px; font-size: 15px; font-weight: 500;">Stuur een WhatsApp-bericht</a>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; padding-top: 30px; border-top: 1px solid oklch(40% 0.02 140);">
           <div>
             <h4 style="font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase; color: {{ accentSoft }}; margin: 0 0 10px;">Openingsuren</h4>
@@ -299,9 +299,9 @@
       <sc-if value="{{ showMap }}" hint-placeholder-val="{{ true }}">
         <div>
           <div style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px oklch(25% 0.04 140 / 0.28); border: 1px solid oklch(50% 0.02 140);">
-            <iframe title="Locatie" style="width: 100%; height: 340px; border: 0; display: block; filter: saturate(0.85) contrast(1.02);" loading="lazy" src="https://maps.google.com/maps?q=Kanunnik+Maesstraat+1+8500+Kortrijk&amp;output=embed"></iframe>
+            <iframe title="Locatie" style="width: 100%; height: 340px; border: 0; display: block; filter: saturate(0.6) contrast(1.02);" loading="lazy" src="https://maps.google.com/maps?q=Kanunnik+Maesstraat+1+8500+Kortrijk&amp;output=embed"></iframe>
           </div>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=Kanunnik+Maesstraat+1+8500+Kortrijk" target="_blank" rel="noopener" style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; background: {{ accentColor }}; color: oklch(98% 0.01 140); font-size: 15px; font-weight: 500; padding: 14px 20px; border-radius: 3px; text-decoration: none;">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Kanunnik+Maesstraat+1+8500+Kortrijk" target="_blank" rel="noopener" style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; background: {{ accentSoft }}; color: {{ accentDark }}; font-size: 15px; font-weight: 500; padding: 14px 20px; border-radius: 3px; text-decoration: none;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             Open in Google Maps
           </a>
@@ -318,7 +318,7 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}, &quot;accentColor&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#274119&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#274119&quot;, &quot;#8c4a30&quot;, &quot;#b56a45&quot;, &quot;#9c5a3c&quot;]}, &quot;accentDark&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#162710&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#162710&quot;, &quot;#5a3020&quot;, &quot;#4a2818&quot;]}, &quot;showPhoto&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Over mij&quot;}, &quot;showMap&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contact&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}, &quot;accentColor&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#274119&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#274119&quot;, &quot;#8c4a30&quot;, &quot;#b56a45&quot;, &quot;#9c5a3c&quot;]}, &quot;accentDark&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#1c211a&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#1c211a&quot;, &quot;#5a3020&quot;, &quot;#4a2818&quot;]}, &quot;showPhoto&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Over mij&quot;}, &quot;showMap&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contact&quot;}}">
 class Component extends DCLogic {
   state = { isMobile: typeof window !== 'undefined' && window.innerWidth <= 760, fasciaInfoOpen: false, menuOpen: false };
 
@@ -339,7 +339,7 @@ class Component extends DCLogic {
     const m = this.state.isMobile;
     return {
       accentColor: accent,
-      accentDark: this.props.accentDark ?? '#162710',
+      accentDark: this.props.accentDark ?? '#1c211a',
       accentText: '#2b5322',
       accentSoft: 'oklch(85% 0.05 140)',
       showPhoto: this.props.showPhoto ?? true,
