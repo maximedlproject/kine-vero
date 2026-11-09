@@ -30,9 +30,10 @@
 <!-- Icons -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<!-- Performance: fonts worden in <helmet> geladen, dit versnelt de handshake -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Lettertypes: zelf gehost (privacy: geen verbinding met Google Fonts) -->
+<link rel="preload" href="assets/fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 
 <!-- Structured data (JSON-LD).
      geo, sameAs en openingHoursSpecification zijn ingevuld vanuit het
@@ -143,8 +144,6 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <script src="./image-slot.js"></script>
   <style>
     body { margin: 0; }
@@ -299,7 +298,11 @@
       <sc-if value="{{ showMap }}" hint-placeholder-val="{{ true }}">
         <div>
           <div style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 50px oklch(25% 0.04 140 / 0.28); border: 1px solid oklch(50% 0.02 140);">
-            <iframe title="Locatie" style="width: 100%; height: 340px; border: 0; display: block; filter: saturate(0.6) contrast(1.02);" loading="lazy" src="https://maps.google.com/maps?q=Kanunnik+Maesstraat+1+8500+Kortrijk&amp;output=embed"></iframe>
+            <!-- Statische kaart (zelf gehost, geen verbinding met Google bij het laden). Klik opent Google Maps. -->
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Kanunnik+Maesstraat+1+8500+Kortrijk" target="_blank" rel="noopener" aria-label="Locatie Kanunnik Maesstraat 1, Kortrijk - open in Google Maps" style="display: block;">
+              <img src="assets/kaart-kortrijk.webp" alt="Kaart met de locatie van de praktijk: Kanunnik Maesstraat 1, 8500 Kortrijk" width="700" height="340" loading="lazy" decoding="async" style="width: 100%; height: 340px; object-fit: cover; object-position: center; border: 0; display: block; filter: saturate(0.6) contrast(1.02);">
+            </a>
+            <span style="position: absolute; right: 0; bottom: 0; background: oklch(98% 0.005 140 / 0.85); color: oklch(30% 0.015 140); font-size: 11px; line-height: 1.4; padding: 2px 6px; border-top-left-radius: 3px;">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">OpenStreetMap</a>-bijdragers</span>
           </div>
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Kanunnik+Maesstraat+1+8500+Kortrijk" target="_blank" rel="noopener" style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; background: {{ accentSoft }}; color: {{ accentDark }}; font-size: 15px; font-weight: 500; padding: 14px 20px; border-radius: 3px; text-decoration: none;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
