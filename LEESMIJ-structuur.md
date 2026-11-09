@@ -25,5 +25,5 @@ seo/                   <- SEO-opvolging en back-ups (niet publiek)
 - Geen Google Fonts, geen Google Maps-iframe, geen externe scripts (privacy).
   Controle: zoek in `docs/` op `googleapis`, `gstatic`, `output=embed`, `unpkg`.
 - Behoud `docs/CNAME` als die bestaat.
-- Openingsuren: maandag tot vrijdag 8-20u, op afspraak (zichtbaar en in JSON-LD).
+- Openingsuren: maandag tot vrijdag, op afspraak (zichtbaar; geen uren in JSON-LD).
 - `wrangler.jsonc` is niet in gebruik (de site draait op GitHub Pages).
