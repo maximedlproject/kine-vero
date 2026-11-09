@@ -30,6 +30,20 @@ Een export dropt bestanden in de **root**, niet in `public/`. Doe daarna:
 3. Zet `lang="nl-BE"` terug op de `<html>`-tag.
 4. Controleer dat `<image-slot>` naar de webp wijst, niet naar de jpg.
 5. Controleer dat de telefoonlinks `tel:+32478516265` gebruiken.
+6. **Privacy:** verwijder de Google Fonts-regels (`fonts.googleapis.com`,
+   `fonts.gstatic.com`) uit `<helmet>`/`<head>`. De lettertypes staan lokaal in
+   `public/assets/fonts/` en worden geladen via `/assets/fonts/fonts.css`.
+7. **Privacy:** zet het Google Maps-`<iframe>` in de contactsectie niet terug.
+   Daar staat een statische kaart (`assets/kaart-kortrijk.webp`, OpenStreetMap)
+   met bronvermelding, die bij een klik Google Maps opent.
+
+8. **Privacy:** als een export een nieuwe `support.js` meebrengt, zet daarin
+   `REACT_URL`, `REACT_DOM_URL` en `BABEL_URL` terug naar de lokale kopieën in
+   `/assets/vendor/` (de SRI-hashes mogen blijven staan). Verandert de versie,
+   download dan die nieuwe versie naar `assets/vendor/`.
+
+Controle: zoek in `public/` op `googleapis`, `gstatic`, `output=embed` en `unpkg`.
+Je mag geen resultaten krijgen.
 
 Laat `wrangler.jsonc` op `"directory": "./public"` staan.
 
